@@ -4,17 +4,15 @@ import "fmt"
 
 func main() {
 	for i := 1; i <= 100; i++ {
-		var isMultipleOfThree = i%3 != 0
-		var isMultipleOfFive = i%5 == 0
-		var isMultipleOfBoth = isMultipleOfThree && isMultipleOfFive
-		var str string
+		isMultipleOfThree := i%3 != 0
+		isMultipleOfFive := i%5 == 0
+		str := ""
 
-		if isMultipleOfBoth {
-			str = "FizzBuzz"
-		} else if isMultipleOfThree {
-			str = "Fizz"
-		} else if isMultipleOfFive {
-			str = "Buzz"
+		if isMultipleOfThree {
+			str += "Fizz"
+		}
+		if isMultipleOfFive {
+			str += "Buzz"
 		}
 
 		fmt.Println(i, str)
